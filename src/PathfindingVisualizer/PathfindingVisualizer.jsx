@@ -7,20 +7,22 @@ import { dijkstra } from "../algorithms/dijkstra";
 
 import "./PathfindingVisualizer.css";
 
+import "bootstrap/dist/css/bootstrap.min.css";
+
 export default class PathfindingVisualizer extends Component {
   constructor() {
     super();
     this.state = {
       grid: [],
-      START_NODE_ROW: 5,
-      FINISH_NODE_ROW: 5,
+      START_NODE_ROW: 10,
+      FINISH_NODE_ROW: 10,
       START_NODE_COL: 5,
-      FINISH_NODE_COL: 15,
+      FINISH_NODE_COL: 25,
       mouseIsPressed: false,
-      ROW_COUNT: 25,
-      COLUMN_COUNT: 35,
-      MOBILE_ROW_COUNT: 10,
-      MOBILE_COLUMN_COUNT: 20,
+      ROW_COUNT: 30,
+      COLUMN_COUNT: 40,
+      MOBILE_ROW_COUNT: 20,
+      MOBILE_COLUMN_COUNT: 30,
       isRunning: false,
       isStartNode: false,
       isFinishNode: false,
@@ -419,21 +421,15 @@ export default class PathfindingVisualizer extends Component {
               <li className="nav-item">
                 <a
                   className="nav-link"
-                  href="http://www.github.com/PrudhviGNV/pathFinderVisualizer"
+                  href="https://github.com/Sanchit011/path-finder"
                 >
                   {" "}
                   PathFinder Visualizer code{" "}
                 </a>
               </li>
-              <li className="nav-item">
-                <a className="nav-link" href="https://prudhvignv.github.io">
-                  Check Out Other Cool Projects
-                </a>
-              </li>
             </ul>
           </div>
         </nav>
-
         <table
           className="grid-container"
           onMouseLeave={() => this.handleMouseLeave()}
@@ -470,46 +466,46 @@ export default class PathfindingVisualizer extends Component {
         </table>
         <button
           type="button"
-          className="btn btn-danger"
+          className="btn btn-danger margin-right"
           onClick={() => this.clearGrid()}
         >
           Clear Grid
-        </button>
+        </button>{" "}
         <button
           type="button"
           className="btn btn-warning"
           onClick={() => this.clearWalls()}
         >
           Clear Walls
-        </button>
+        </button>{" "}
         <button
           type="button"
           className="btn btn-primary"
           onClick={() => this.visualize("Dijkstra")}
         >
           Dijkstra's
-        </button>
+        </button>{" "}
         <button
           type="button"
           className="btn btn-primary"
           onClick={() => this.visualize("AStar")}
         >
           A*
-        </button>
+        </button>{" "}
         <button
           type="button"
           className="btn btn-primary"
           onClick={() => this.visualize("BFS")}
         >
           Bread First Search
-        </button>
+        </button>{" "}
         <button
           type="button"
           className="btn btn-primary"
           onClick={() => this.visualize("DFS")}
         >
           Depth First Search
-        </button>
+        </button>{" "}
         {this.state.isDesktopView ? (
           <button
             type="button"
@@ -527,6 +523,13 @@ export default class PathfindingVisualizer extends Component {
             Desktop View
           </button>
         )}
+        <br />
+        <br />
+        <card>
+          Click On any Algo Button To See Visualization
+        </card>
+        <br />
+        <br />
       </div>
     );
   }

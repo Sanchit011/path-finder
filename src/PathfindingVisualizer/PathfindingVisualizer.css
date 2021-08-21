@@ -1,5 +1,5 @@
 .grid-container {
-  margin: 10% auto;
+  margin: 2% auto;
 }
 
 .grid {
@@ -7,5 +7,5 @@
 }
 
 button {
-  margin: 2px;
+  margin-bottom: 20px;
 }
