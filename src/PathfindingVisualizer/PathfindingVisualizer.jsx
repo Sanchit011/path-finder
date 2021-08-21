@@ -1,9 +1,9 @@
 import React, { Component } from "react";
 import Node from "./Node/Node";
-import { dijkstra } from "../algorithms/dijkstra";
 import { AStar } from "../algorithms/aStar";
 import { dfs } from "../algorithms/dfs";
 import { bfs } from "../algorithms/bfs";
+import { dijkstra } from "../algorithms/dijkstra";
 
 import "./PathfindingVisualizer.css";
 
